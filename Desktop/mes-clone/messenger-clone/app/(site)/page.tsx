@@ -13,7 +13,7 @@ export default function Home() {
         lg:px-8 
         bg-gray-100"
     >
-      <div className="sm:mx-auto sm:w-full sm:max-w-md bg-red-400">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Image
           width="48"
           height={48}
