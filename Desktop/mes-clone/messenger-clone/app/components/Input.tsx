@@ -13,7 +13,7 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({
   label,
   id,
-  type,
+  type = "text",
   required,
   register,
   errors,
@@ -22,13 +22,13 @@ const Input: React.FC<InputProps> = ({
   return (
     <div>
       <label
+        htmlFor={id}
         className="
             block
             text-sm
             font-medium
             leading-6
             text-gray-900"
-        htmlFor={id}
       >
         {label}
       </label>
@@ -38,7 +38,7 @@ const Input: React.FC<InputProps> = ({
           type={type}
           autoComplete={id}
           disabled={disabled}
-          {...(register(id), { required })}
+          {...register(id, { required })}
           className={clsx(
             `form-input
             block
